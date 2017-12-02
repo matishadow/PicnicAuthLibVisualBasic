@@ -43,8 +43,12 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="RestSharp, Version=106.1.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.1.0\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -63,7 +67,21 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.vb" />
+    <Compile Include="Classes\Endpoints\AuthorizedEndpoint.vb" />
+    <Compile Include="Classes\Endpoints\AuthUsersEndpoint.vb" />
+    <Compile Include="Classes\Endpoints\AuthUsersSecretsEndpoint.vb" />
+    <Compile Include="Classes\Endpoints\CompaniesEndpoint.vb" />
+    <Compile Include="Classes\Endpoints\RestEndpoint.vb" />
+    <Compile Include="Models\AddAuthUserArgument.vb" />
+    <Compile Include="Models\AddCompanyArgument.vb" />
+    <Compile Include="Models\AuthUser.vb" />
+    <Compile Include="Models\AuthUsersInCompany.vb" />
+    <Compile Include="Models\CreatedAuthUser.vb" />
+    <Compile Include="Models\IdentityResult.vb" />
+    <Compile Include="Models\LoggedCompany.vb" />
+    <Compile Include="Models\OneTimePassword.vb" />
+    <Compile Include="Models\OtpValidationResult.vb" />
+    <Compile Include="Models\TokenResponse.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -98,6 +116,10 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
