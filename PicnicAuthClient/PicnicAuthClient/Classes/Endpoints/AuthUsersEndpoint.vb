@@ -3,7 +3,7 @@
 Friend Class AuthUsersEndpoint
     Inherits AuthorizedEndpoint
 
-    Protected Sub New(restClient As IRestClient, apiKey As String)
+    Protected Friend Sub New(restClient As IRestClient, apiKey As String)
         MyBase.New(restClient, apiKey)
     End Sub
 

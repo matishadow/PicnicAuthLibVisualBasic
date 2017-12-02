@@ -71,7 +71,12 @@
     <Compile Include="Classes\Endpoints\AuthUsersEndpoint.vb" />
     <Compile Include="Classes\Endpoints\AuthUsersSecretsEndpoint.vb" />
     <Compile Include="Classes\Endpoints\CompaniesEndpoint.vb" />
+    <Compile Include="Classes\Endpoints\HotpsEndpoint.vb" />
     <Compile Include="Classes\Endpoints\RestEndpoint.vb" />
+    <Compile Include="Classes\Endpoints\TokensEndpoint.vb" />
+    <Compile Include="Classes\Endpoints\TotpsEndpoint.vb" />
+    <Compile Include="Interfaces\IPicnicAuthClient.vb" />
+    <Compile Include="Classes\PicnicAuthClient.vb" />
     <Compile Include="Models\AddAuthUserArgument.vb" />
     <Compile Include="Models\AddCompanyArgument.vb" />
     <Compile Include="Models\AuthUser.vb" />
@@ -118,8 +123,6 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
